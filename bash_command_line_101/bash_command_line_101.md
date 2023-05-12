@@ -2,7 +2,18 @@
 
 author:   Nicole Feldman and Elizabeth Drellich
 email:    feldmanna@chop.edu drelliche@chop.edu
-version: 1.4.0
+version: 1.4.0 
+current_version_description: add less command, update man section, improve quiz and appearance 
+
+@version_history 
+
+Previous versions: 
+ 
+* [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Remove Atom references
+* [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md#1): Increment version missed last time
+* [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/17670d7b638de3b4cbbead4f7a133b355f386788/bash_command_line_101/bash_command_line_101.md#1): Major updates
+@end
+
 module_template_version: 3.0.0
 language: en
 narrator: UK English Female
@@ -45,11 +56,15 @@ script: https://kit.fontawesome.com/83b2343bd4.js
 
 Learners should be familiar with locating files and folders stored in a directory system.  Our [Directories and File Paths](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/directories_and_file_paths/directories_and_file_paths.md#1) module can provide some help with gaining these skills.
 
-
-
 **Learning Objectives**
 
 @learning_objectives
+
+**Version History**
+
+This version (@version): @current_version_description
+
+@version_history
 
 </div>
 
