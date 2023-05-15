@@ -8,7 +8,7 @@ current_version_description: add less command, update man section, improve quiz 
 @version_history 
 
 Previous versions: 
- 
+
 * [1.3.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/ba1dba7a4c1d4393ae8b42346fe5c69d587b8ee6/bash_command_line_101/bash_command_line_101.md#1): Remove Atom references
 * [1.2.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/466799a081d2cb74d155dc0a26951d3492b81f8c/bash_command_line_101/bash_command_line_101.md#1): Increment version missed last time
 * [1.1.1](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/17670d7b638de3b4cbbead4f7a133b355f386788/bash_command_line_101/bash_command_line_101.md#1): Major updates
