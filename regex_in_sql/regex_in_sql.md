@@ -19,7 +19,7 @@ long_description: Ready to use regular expressions (regex) in SQL?  This module 
 estimated_time_in_minutes: 30
 
 @pre_reqs
-Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).  Additionally, some experience using regular expressions is necessary, as this module does not teach the syntax of regular expressions.  If you need an introduction to regular expressions, we suggest our [Introduction to Regular Expressions](https://example.com).
+Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.  If you need to develop basic SQL fluency we recommend our module [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md).  Additionally, some experience using regular expressions is necessary.  To learn how to compose and use simple regular expressions, consider the [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1) module.  More advanced material can be found in [Regular Expressions: Intermediate](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_intermediate/regular_expressions_intermediate.md#1)
 @end
 
 @learning_objectives  
@@ -50,7 +50,7 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 
 ## A Brief Refresher
 
-These concepts should seem familiar to you.  If this brief refresher seems to be new information, consider reviewing [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md) or 
+These concepts should seem familiar to you.  If this brief refresher seems to be new information, consider reviewing [SQL Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/sql_basics/sql_basics.md) or [Regular Expressions Basics](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/regular_expressions_basics/regular_expressions_basics.md#1).
 
 **SQL** (**S**tructured **Q**uery **L**anguage) is a language that for more than four decades has been used to interact with **relational databases**, which store rectangular data in rows and columns (also known as fields).  A common pattern for SQL queries is `SELECT ... FROM ... WHERE`.
 
@@ -93,14 +93,14 @@ LIMIT 10;
 
 </div>
 
-We have visually scanned through some of the data but we want to make sure we understand the kinds of nut allergies that are included.  Are tree nuts specified?  Peanut is certainly included.  What about coconuts?  Are there specific nut types with "nut" in their name also included, like walnut or macadamia nut?  Let's get all the distinct allergy types that include the string "nut" anywhere in the description.  
+We have visually scanned through some of the data but we want to make sure we understand the kinds of nut allergies that are included.  Are tree nuts specified?  Peanut is certainly included.  What about coconuts?  Are there specific nut types with "nut" in their name also included, like walnut or macadamia nut?  Let's get all the distinct allergy types that include the string "nut" or "nuts" at the end of a word.  
 
-We'll start our regular expression (regex) with `.?`, indicating that our pattern starts with zero to many characters of any kind.  We then follow that with `nut`, which indicates that literal text, and we end our pattern with another `.?`, indicating that our pattern ends with zero to many characters of any kind.  
+We'll start our regular expression (regex) with `.*`, indicating that our pattern starts with zero to many characters of any kind.  We then follow that with `nut`, which indicates that literal text, and we end our pattern with another `.*`, indicating that our pattern ends with zero to many characters of any kind.  
 
 ```sql
 SELECT DISTINCT description
 FROM allergies
-WHERE description REGEXP '.?nut.?';
+WHERE description REGEXP '.*nut.*';
 ```
 @AlaSQL.eval("#dataTable4b")
 
@@ -173,12 +173,12 @@ Small syntax differences like these are a good reason why it can be helpful to p
 
 How is `REGEXP` different from `REGEXP_LIKE`, a SQL operator you may have had prior exposure to?
 
-The short answer is that they are synonyms or aliases.  You can use `REGEXP` and `REGEXP_LIKE` in much the same way.  They do have slightly different structures, however, in the way you write them.  Execute the two queries in the next two chunks of SQL code to see how these two forms accomplish the same thing.
+The short answer is that they are synonyms or aliases.  You can use `REGEXP` and `REGEXP_LIKE` in much the same way.  They do have slightly different structures, however, in the way you write them.  Execute the two queries in the next two chunks of SQL code to see how these two forms accomplish the same thing.  The pattern we're using is identifying addresses with apartment or unit numbers, to help us find a cohort of patients who are likely to be renters.
 
 ```sql
 SELECT *
-FROM observations
-WHERE NOT observed REGEXP '\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z';
+FROM patients
+WHERE LOWER(address) REGEXP ' apt\.? ';
 ```
 @AlaSQL.eval("#dataTable5b")
 
