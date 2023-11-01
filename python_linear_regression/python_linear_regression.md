@@ -70,6 +70,22 @@ import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_t
 - In the case of linear regression, the target variable is a continuous variable. In a supervised learning problem, the machine learning algorithm is given a set of training data and asked to learn a function that can map the input variables to the output variable. The training data consists of pairs of input and output variables. The algorithm learns the function by finding the best fit line to the data. Once the algorithm has learned the function, it can be used to make predictions on new data. To make a prediction, the algorithm simply plugs the values of the input variables into the function.
 - Linear regression is a popular supervised learning algorithm because it is simple to implement and understand. It is also a versatile algorithm that can be used to solve a variety of problems.
 
+Which of the following is NOT a characteristic of linear regression?
+
+
+[( )] Linear regression models the relationship between the target variable and the predictor variables using a linear equation.
+[( )] Linear regression is a supervised learning algorithm.
+[( )] Linear regression is a simple to implement and understand algorithm.
+[(X)] Linear regression can be used to predict categorical variables.
+[( )] Linear regression is a versatile algorithm that can be used to solve a variety of problems.
+***
+<div class = "answer">
+
+This question is more difficult than the previous one because it requires the test-taker to have a deeper understanding of the characteristics of linear regression. The test-taker must be able to identify which of the answer choices is not a characteristic of linear regression, even though all of the other answer choices are valid characteristics.
+
+</div>
+***
+
 
 ### Applications of linear regression in machine learning
 Linear Regression can be used for a variety of tasks, such as: 
@@ -105,6 +121,23 @@ where:
 - `xi` is the ith predictor variable
 
 The coefficients of the linear equation are estimated using the ordinary least squares (OLS) method. The OLS method minimizes the sum of the squared residuals, which are the differences between the predicted values and the actual values of the target variable. Once the linear regression model is trained, it can be used to make predictions on new data. To make a prediction, we simply plug the values of the predictor variables into the linear equation. 
+
+Which of the following is NOT a component of the linear regression formula?
+
+
+[( )] Target variable
+[( )] Bias term
+[( )] Coefficient for the ith predictor variable
+[( )] ith predictor variable
+[(X)] Variance of the target variable
+***
+<div class = "answer">
+
+The variance of the target variable is not a component of the linear regression formula. The linear regression formula is used to predict the mean value of the target variable, not the variance.
+
+</div>
+***
+
 
     
 ### Python Implementation of Linear Regression
@@ -197,6 +230,33 @@ Linear regression is a powerful machine learning algorithm, but it has some limi
 - **Overfitting:** Linear regression is prone to overfitting, which occurs when the model learns the training data too well and is unable to generalize to new data. Overfitting can be prevented by using regularization techniques such as L1 or L2 regularization.
 - **Outliers:** Linear regression is sensitive to outliers, which are data points that are significantly different from the rest of the data. Outliers can have a large impact on the parameters of the linear regression model and can lead to inaccurate predictions.
 - **Collinearity:** Linear regression is also sensitive to collinearity, which occurs when two or more predictor variables are highly correlated with each other. Collinearity can make it difficult to interpret the results of the linear regression model and can lead to inaccurate predictions.
+
+[True/False] Linear regression is sensitive to collinearity.
+
+
+[(X)] True
+[( )] False
+***
+<div class = "answer">
+
+This question is designed to test the test-taker's understanding of the concept of collinearity and its impact on linear regression models. Collinearity is a serious problem in linear regression because it can make it difficult to interpret the results of the model and can lead to inaccurate predictions.
+
+</div>
+***
+
+
+[True/False] Overfitting can be prevented by using regularization techniques.
+
+
+[(X)] True
+[( )] False
+***
+<div class = "answer">
+
+This question is designed to test the test-taker's understanding of the concept of overfitting and how to prevent it. Overfitting is a common problem in machine learning, and it is important to be able to identify and prevent it. Regularization techniques such as L1 and L2 regularization can be used to prevent overfitting in linear regression models.
+
+</div>
+***
 
 ## Conclusion
 
